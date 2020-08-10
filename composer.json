@@ -1,0 +1,25 @@
+{
+    "name": "klintlili/yii2-mobile",
+    "description": "mobile module base on yii2-app-basic template.",
+    "keywords": [
+        "yii2",
+        "extension",
+        "module",
+        "mobile"
+    ],
+    "homepage": "https://github.com/klintlili/yii2-mobile",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "klintlili",
+            "email": "909102757@qq.com",
+            "homepage": "http://www.xiongxi.net/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "klintlili\\mobile\\": "src"
+        }
+    }
+}
