@@ -21,5 +21,10 @@
         "psr-4": {
             "klintlili\\mobile\\": "src"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "dev-master"
+        }
     }
 }
