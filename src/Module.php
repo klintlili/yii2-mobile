@@ -7,11 +7,12 @@ use snor\web\BaseModule;
 use yii\base\ExitException;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
+use yii\base\BootstrapInterface;
 
 /**
  * mobile module definition class
  */
-class Module extends BaseModule
+class Module extends BaseModule implements BootstrapInterface
 {
     /**
      * @inheritdoc
@@ -29,18 +30,19 @@ class Module extends BaseModule
     public $https = false;
 
     /**
-     * @var bool
+     * @var array
      */
-    public $rules;
+    public $rules = [];
 
     /**
      * {@inheritdoc}
      */
     public function bootstrap($app)
     {
-        if(!$this->rules){
-            $this->rules = dirname(__FILE__).'/config/rules.php';
+        if(empty($this->rules)){
+            $this->rules = require dirname(__FILE__).'/config/rules.php';
         }
+
         if ($app instanceof \yii\web\Application) {
             $app->getUrlManager()->addRules($this->rules, false);
         }
