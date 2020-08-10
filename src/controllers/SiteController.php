@@ -1,13 +1,13 @@
 <?php
 
-namespace snor\web\mobile\controllers;
+namespace klintlili\mobile\controllers;
 
 use Yii;
 use snor\web\forms\BusinessForm;
-use snor\web\mobile\models\District;
+use klintlili\mobile\models\District;
 use yii\web\Controller;
 use yii\web\ErrorAction;
-use snor\web\mobile\models\HomeIndex;
+use klintlili\mobile\models\HomeIndex;
 
 /**
  * Class SiteController

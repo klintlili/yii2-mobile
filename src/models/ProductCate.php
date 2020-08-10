@@ -1,6 +1,6 @@
 <?php
 
-namespace snor\web\mobile\models;
+namespace klintlili\mobile\models;
 
 use shushi100\yii\behaviors\PinyinSlugBehavior;
 use snor\web\helpers\Html;

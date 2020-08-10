@@ -2,8 +2,8 @@
 
 use yii\helpers\Url;
 use snor\web\helpers\Html;
-use snor\web\mobile\models\CaseCate;
-use snor\web\mobile\models\ProductCate;
+use klintlili\mobile\models\CaseCate;
+use klintlili\mobile\models\ProductCate;
 //var_dump(Url::to(['product/index', 'code' => 'diyuan']));die;
 ?>
 <header class="snor_wrap header">

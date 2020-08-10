@@ -1,10 +1,10 @@
 <?php
 
-namespace snor\web\mobile\models\console\sitemap;
+namespace klintlili\mobile\models\console\sitemap;
 
 use Yii;
 use shushi100\yii\sitemap\SitemapEntityInterface;
-use snor\web\mobile\models\Project as BaseProject;
+use klintlili\mobile\models\Project as BaseProject;
 use yii\db\ActiveQuery;
 
 /**

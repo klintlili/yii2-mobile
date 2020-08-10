@@ -1,6 +1,6 @@
 <?php
 
-namespace snor\web\mobile\models;
+namespace klintlili\mobile\models;
 
 use Yii;
 use shushi100\yii\behaviors\UploadBehavior;

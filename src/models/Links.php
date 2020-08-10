@@ -1,6 +1,6 @@
 <?php
 
-namespace snor\web\mobile\models;
+namespace klintlili\mobile\models;
 
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;

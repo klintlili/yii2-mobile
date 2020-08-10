@@ -1,6 +1,6 @@
 <?php /** @noinspection PhpUnhandledExceptionInspection */
 
-use snor\web\mobile\assets\AppAsset;
+use klintlili\mobile\assets\AppAsset;
 use snor\web\helpers\Html;
 use snor\web\models\UrlSeo;
 

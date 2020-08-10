@@ -1,9 +1,9 @@
 <?php
 
-namespace snor\web\mobile\controllers;
+namespace klintlili\mobile\controllers;
 
-use snor\web\mobile\forms\BusinessForm;
-use snor\web\mobile\models\District;
+use klintlili\mobile\forms\BusinessForm;
+use klintlili\mobile\models\District;
 use yii\web\Controller;
 
 /**

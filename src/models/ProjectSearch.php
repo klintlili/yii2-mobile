@@ -1,6 +1,6 @@
 <?php
 
-namespace snor\web\mobile\models;
+namespace klintlili\mobile\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;

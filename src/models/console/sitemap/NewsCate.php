@@ -1,11 +1,11 @@
 <?php
 
-namespace snor\web\mobile\models\console\sitemap;
+namespace klintlili\mobile\models\console\sitemap;
 
 use Yii;
 use shushi100\yii\sitemap\SitemapEntityInterface;
 use snor\web\commands\base\FakerQuery;
-use snor\web\mobile\models\NewsCate as BaseNewsCate;
+use klintlili\mobile\models\NewsCate as BaseNewsCate;
 use yii\base\InvalidConfigException;
 
 /**

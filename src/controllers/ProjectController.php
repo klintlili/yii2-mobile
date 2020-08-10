@@ -1,13 +1,13 @@
 <?php
 
-namespace snor\web\mobile\controllers;
+namespace klintlili\mobile\controllers;
 
 use Yii;
 use yii\web\Controller;
-use snor\web\mobile\models\CaseCate;
-use snor\web\mobile\models\HomeIndex;
-use snor\web\mobile\models\Project;
-use snor\web\mobile\models\ProjectSearch;
+use klintlili\mobile\models\CaseCate;
+use klintlili\mobile\models\HomeIndex;
+use klintlili\mobile\models\Project;
+use klintlili\mobile\models\ProjectSearch;
 use yii\web\NotFoundHttpException;
 
 /**

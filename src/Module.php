@@ -6,7 +6,6 @@ use Yii;
 use snor\web\BaseModule;
 use yii\base\ExitException;
 use yii\base\InvalidConfigException;
-use yii\helpers\ArrayHelper;
 use yii\base\BootstrapInterface;
 
 /**
@@ -22,7 +21,7 @@ class Module extends BaseModule implements BootstrapInterface
     /**
      * @var bool
      */
-    public $onlyChildDomain = false;
+    public $onlyChildDomain = true;
 
     /**
      * @var bool
@@ -65,8 +64,9 @@ class Module extends BaseModule implements BootstrapInterface
     }
 
     /**
-     * 只允许子域名http://m.snor-china.com的形式访问m站mobile模块
+     * 通过子域名http://m.snor-china.com的形式访问m站mobile模块的话，pathInfo中就不要出现mobile字眼了
      * 自动301跳转到 m站首页
+     * 假如onlyChildDomain设置为false,也就可以通过http://www.snor-china.com/mobile/XXXX的形式访问mobile模块
      */
     protected function filterDomainUrl()
     {
@@ -75,7 +75,7 @@ class Module extends BaseModule implements BootstrapInterface
                 Yii::$app->getResponse()->redirect(Yii::$app->request->hostInfo, 301);
                 Yii::$app->end();
             }
-        }else{
+        } elseif ($this->onlyChildDomain) {
             Yii::$app->getResponse()->redirect(Yii::$app->params['m_website'], 301);
             Yii::$app->end();
         }

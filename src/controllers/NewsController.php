@@ -1,12 +1,12 @@
 <?php
 
-namespace snor\web\mobile\controllers;
+namespace klintlili\mobile\controllers;
 
 use Yii;
-use snor\web\mobile\models\HomeIndex;
-use snor\web\mobile\models\News;
-use snor\web\mobile\models\NewsCate;
-use snor\web\mobile\models\NewsSearch;
+use klintlili\mobile\models\HomeIndex;
+use klintlili\mobile\models\News;
+use klintlili\mobile\models\NewsCate;
+use klintlili\mobile\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 

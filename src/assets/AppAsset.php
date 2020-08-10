@@ -1,8 +1,7 @@
 <?php
 
-namespace snor\web\mobile\assets;
+namespace klintlili\mobile\assets;
 
-use shushi100\yii\assets\AdminAsset;
 use yii\web\AssetBundle;
 
 /**
@@ -13,7 +12,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-//        'css/mobile/site.css',
+        //'css/mobile/site.css',
     ];
     public $js = [
     ];

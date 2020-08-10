@@ -1,11 +1,11 @@
 <?php
 
-namespace snor\web\mobile\controllers;
+namespace klintlili\mobile\controllers;
 
 use Yii;
 use yii\web\Controller;
-use snor\web\mobile\models\ProductSearch;
-use snor\web\mobile\models\Product;
+use klintlili\mobile\models\ProductSearch;
+use klintlili\mobile\models\Product;
 use yii\web\NotFoundHttpException;
 
 /**

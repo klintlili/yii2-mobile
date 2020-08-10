@@ -1,10 +1,10 @@
 <?php
 
-namespace snor\web\mobile\forms;
+namespace klintlili\mobile\forms;
 
 use shushi100\yii\validators\MobileValidator;
-use snor\web\mobile\models\Business;
-use snor\web\mobile\models\District;
+use klintlili\mobile\models\Business;
+use klintlili\mobile\models\District;
 use yii\base\Model;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace snor\web\mobile\controllers;
+namespace klintlili\mobile\controllers;
 
 use snor\web\models\HomeIndex;
 use yii\web\Controller;
