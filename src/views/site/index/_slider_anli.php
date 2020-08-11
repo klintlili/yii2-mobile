@@ -35,7 +35,7 @@ $this->registerJsFile("@web/js/TouchSlide.1.1.js",["depends" => ["snor\\web\\ass
         <ul>
             <?php foreach ($newsLists as $newsList){ ?>
             <li>
-                <a href="<?=Url::to(['/news/view', 'id' => $newsList['id']])?>">
+                <a href="<?=Url::to(['/mobile/news/view', 'id' => $newsList['id']])?>">
                     <img src="<?=Url::to(Html::getPicUrlByPath($newsList['pic']));?>" alt="<?=$newsList['title']?>"/>
                     <div class="slide_desc flex">
                         <div class="slide_time">

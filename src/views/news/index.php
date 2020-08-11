@@ -26,12 +26,12 @@ if(!empty($code)) {
             <div class="snor_w">
                 <ul class="clearfix flex">
                     <li<?=empty($code)?" class='current'":"";?>>
-                        <a href="<?=Url::to(['/news/index']);?>">全部</a>
+                        <a href="<?=Url::to(['/mobile/news/index']);?>">全部</a>
                     </li>
                     <?php /* @var $cate_list snor\web\models\NewsCate */ ?>
                     <?php foreach ($cate_lists as $key => $cate_list){ ?>
                         <li<?=!empty($code)&&$code==$cate_list->code?' class="current"':''?>>
-                            <a href="<?=Url::to(['/news/index', 'code' => $cate_list->code]);?>"><?=$cate_list->name;?></a>
+                            <a href="<?=Url::to(['/mobile/news/index', 'code' => $cate_list->code]);?>"><?=$cate_list->name;?></a>
                         </li>
                     <?php } ?>
                 </ul>
@@ -45,7 +45,7 @@ if(!empty($code)) {
                         <?php /** @var $list \snor\web\models\News */  ?>
                         <?php foreach ($dataProvider->models as $list) { ?>
                             <dd class="clearfix">
-                                <a href="<?=Url::to(['/news/view', 'id' => $list->id])?>" class="block_a">
+                                <a href="<?=Url::to(['/mobile/news/view', 'id' => $list->id])?>" class="block_a">
                                     <div class="fl news_time border-box">
                                         <div class="news_date"><?=date('d', $list->created_at)?></div>
                                         <div class="news_year_month"><?=date('Y-m', $list->created_at)?></div>

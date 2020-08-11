@@ -14,7 +14,6 @@ $this->title = "地暖空调一体机，空气源热泵，冷凝壁挂炉，全�
 $this->registerMetaTag(["name" => "description", "content" => "施诺,为用户提供热水、采暖、空调、新风、除湿等家庭和公装解决方案,10W用户的大数据积累,为您提供亲近自然的舒适!"]);
 $this->registerJsFile("@web/js/levelDistrict.js",["depends" => ["snor\\web\\assets\\AppAsset"]]);
 $this->registerJsFile("@web/js/submit.js",["depends" => ["snor\\web\\assets\\AppAsset"]]);
-//var_dump(Url::to(['product/index', 'code' => 'diyuan']));die;
 ?>
 
 <div class="wrap index">
@@ -59,23 +58,23 @@ $this->registerJsFile("@web/js/submit.js",["depends" => ["snor\\web\\assets\\App
                 <img src="<?=Url::to('@web/img/house.png');?>" alt="房子" />
                 <div class="house1">
                     <!--施诺全直流变频智能空气源热泵-->
-                    <a href="<?=Url::to(['/product/index', 'code' => 'kongqiyuanrebeng'])?>" class="point"></a>
-                    <a href="<?=Url::to(['/product/index', 'code' => 'kongqiyuanrebeng'])?>" class="blk"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'kongqiyuanrebeng'])?>" class="point"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'kongqiyuanrebeng'])?>" class="blk"></a>
                 </div>
                 <div class="house2">
                     <!--施诺酒窖空调-->
-                    <a href="<?=Url::to(['/product/index', 'code' => 'jiujiaokongtiao'])?>" class="point"></a>
-                    <a href="<?=Url::to(['/product/index', 'code' => 'jiujiaokongtiao'])?>" class="blk"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'jiujiaokongtiao'])?>" class="point"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'jiujiaokongtiao'])?>" class="blk"></a>
                 </div>
                 <div class="house3">
                     <!--施诺纳米碳热膜-->
-                    <a href="<?=Url::to(['/product/index', 'code' => 'namitanremo'])?>" class="point"></a>
-                    <a href="<?=Url::to(['/product/index', 'code' => 'namitanremo'])?>" class="blk"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'namitanremo'])?>" class="point"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'namitanremo'])?>" class="blk"></a>
                 </div>
                 <div class="house4">
                     <!--施诺防霾全热交换新风除湿机-->
-                    <a href="<?=Url::to(['/product/index', 'code' => 'xinfengchushiji'])?>" class="point"></a>
-                    <a href="<?=Url::to(['/product/index', 'code' => 'xinfengchushiji'])?>" class="blk"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'xinfengchushiji'])?>" class="point"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'xinfengchushiji'])?>" class="blk"></a>
                 </div>
                 <div class="house5">
                     <!--施诺环境智能系统-->
@@ -84,13 +83,13 @@ $this->registerJsFile("@web/js/submit.js",["depends" => ["snor\\web\\assets\\App
                 </div>
                 <div class="house6">
                     <!--施诺全屋净水-->
-                    <a href="<?=Url::to(['/product/index', 'code' => 'jingshuiji'])?>" class="point"></a>
-                    <a href="<?=Url::to(['/product/index', 'code' => 'jingshuiji'])?>" class="blk"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'jingshuiji'])?>" class="point"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'jingshuiji'])?>" class="blk"></a>
                 </div>
                 <div class="house7">
                     <!--施诺厨房垃圾处理器-->
-                    <a href="<?=Url::to(['/product/index', 'code' => 'lajichuliqi'])?>" class="point"></a>
-                    <a href="<?=Url::to(['/product/index', 'code' => 'lajichuliqi'])?>" class="blk"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'lajichuliqi'])?>" class="point"></a>
+                    <a href="<?=Url::to(['/mobile/product/index', 'code' => 'lajichuliqi'])?>" class="blk"></a>
                 </div>
             </div>
         </div>
@@ -117,7 +116,7 @@ $this->registerJsFile("@web/js/submit.js",["depends" => ["snor\\web\\assets\\App
                     <ul class="show_item">
                         <?php foreach ($projectLists as $key => $projectList){ ?>
                             <li <?=$key==0?'class="current"':'class=""';?>>
-                                <a href="<?=Url::to(['/project/view', 'id' => $projectList['id']]);?>" class="block_a">
+                                <a href="<?=Url::to(['/mobile/project/view', 'id' => $projectList['id']]);?>" class="block_a">
                                     <img src="<?=Url::to(Html::getPicUrlByPath($projectList['pic']));?>" alt="<?=$projectList['title'];?>"/>
                                     <div class="item_desc border-box">
                                         <div class="item_tt"><?=$projectList['title'];?></div>
@@ -169,13 +168,13 @@ $this->registerJsFile("@web/js/submit.js",["depends" => ["snor\\web\\assets\\App
                                             <?php /* @var $item \snor\web\models\News */ ?>
                                             <?php foreach ($newsList as $item){ ?>
                                                 <dd>
-                                                    <a href="<?=Url::to(['/news/view', 'id' => $item->id]);?>" class="block_a">
+                                                    <a href="<?=Url::to(['/mobile/news/view', 'id' => $item->id]);?>" class="block_a">
                                                         <p class="ellipse1"><?=$item->title?></p>
                                                         <span><?=date('Y-m-d', $item->created_at)?></span>
                                                     </a>
                                                 </dd>
                                             <?php } ?>
-                                            <div><a href="<?=Url::to(['/news/index', 'code' => $key]);?>" class="news_more">更多&gt;</a></div>
+                                            <div><a href="<?=Url::to(['/mobile/news/index', 'code' => $key]);?>" class="news_more">更多&gt;</a></div>
                                         <?php }else{ ?>
                                             <p>暂无数据!</p>
                                         <?php } ?>
@@ -202,7 +201,7 @@ $this->registerJsFile("@web/js/submit.js",["depends" => ["snor\\web\\assets\\App
             </div>
             <?php $form = ActiveForm::begin([
                 'id' => 'xj_business_form',
-                'action' => Url::to(['/site/ajax-business']),
+                'action' => Url::to(['/mobile/site/ajax-business']),
                 'enableAjaxValidation' => true,
                 'enableClientValidation' => false,
                 'enableClientScript' => false

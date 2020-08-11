@@ -11,7 +11,7 @@ use snor\web\models\NewsCate;
             <dd class="border-box">
                 <div class="f_title">关于施诺</div>
                 <ul>
-                    <li><a href="<?=Url::to(['/about/index'])?>">关于施诺</a></li>
+                    <li><a href="<?=Url::to(['/mobile/about/index'])?>">关于施诺</a></li>
                 </ul>
             </dd>
             <?php $product_cate = ProductCate::getCateList();?>
@@ -21,7 +21,7 @@ use snor\web\models\NewsCate;
                     <ul>
                         <?php /** @var $model \snor\web\models\ProductCate */  ?>
                         <?php foreach ($product_cate as $model){ ?>
-                            <li><a href="<?=Url::to(['/product/index', 'code' => $model->code])?>"><?=$model->name;?></a></li>
+                            <li><a href="<?=Url::to(['/mobile/product/index', 'code' => $model->code])?>"><?=$model->name;?></a></li>
                         <?php } ?>
                     </ul>
                 </dd>
@@ -34,7 +34,7 @@ use snor\web\models\NewsCate;
                     <ul>
                         <?php /** @var $model \snor\web\models\CaseCate */  ?>
                         <?php foreach ($project_cate as $model){ ?>
-                            <li><a href="<?=Url::to(['/project/index', 'code' => $model->code])?>"><?=$model->name;?></a></li>
+                            <li><a href="<?=Url::to(['/mobile/project/index', 'code' => $model->code])?>"><?=$model->name;?></a></li>
                         <?php } ?>
                     </ul>
                 </dd>
@@ -47,7 +47,7 @@ use snor\web\models\NewsCate;
                     <ul>
                         <?php /** @var $model \snor\web\models\NewsCate */  ?>
                         <?php foreach ($news_cate as $model){ ?>
-                            <li><a href="<?=Url::to(['/news/index', 'code' => $model->code])?>"><?=$model->name;?></a></li>
+                            <li><a href="<?=Url::to(['/mobile/news/index', 'code' => $model->code])?>"><?=$model->name;?></a></li>
                         <?php } ?>
                     </ul>
                 </dd>
@@ -65,7 +65,7 @@ use snor\web\models\NewsCate;
         <div class="snor_w">
             <?= isset($this->blocks['links']) ? $this->blocks['links'] : '' ?>
             <div class="copyright">
-                Copyright©<?=date('Y')?> 施诺 All rights reserved.</a>
+                Copyright©<?=date('Y')?> 施诺 All rights reserved.
             </div>
             <div class="beianhao">
                 <a href="http://beian.miit.gov.cn/" target="_blank"><img src="<?=Url::to('@web/img/snor_bot_beian.png');?>" alt="备案号" /></a>

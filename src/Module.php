@@ -29,6 +29,10 @@ class Module extends BaseModule implements BootstrapInterface
     public $https = false;
 
     /**
+     * @var string
+     */
+    public $host = 'http://m.abc.com';
+    /**
      * @var array
      */
     public $rules = [];
@@ -43,6 +47,16 @@ class Module extends BaseModule implements BootstrapInterface
         }
 
         if ($app instanceof \yii\web\Application) {
+            $app->set('urlManager', [
+                'class' => 'yii\web\UrlManager',
+                'enablePrettyUrl' => true,
+                'showScriptName' => false,
+                'rules' => $app->getUrlManager()->rules,
+                'ruleConfig' => [
+                    'class' => 'yii\web\UrlRule',
+                    'host' => $this->host,
+                ]
+            ]);
             $app->getUrlManager()->addRules($this->rules, false);
         }
     }
@@ -53,14 +67,13 @@ class Module extends BaseModule implements BootstrapInterface
      */
     public function init()
     {
-        if($this->onlyChildDomain){
-            $this->filterDomainUrl();
+        if (empty($this->host)) {
+            throw new InvalidConfigException('Module::host must be set.');
         }
         parent::init();
         Yii::$app->name .= '施诺官网 - 触屏版';
         $this->defaultRoute = 'site';
         Yii::$app->errorHandler->errorAction = '/mobile/site/error';
-        Yii::$app->set('urlManager', $this->get('urlManager'));
     }
 
     /**
@@ -70,14 +83,29 @@ class Module extends BaseModule implements BootstrapInterface
      */
     protected function filterDomainUrl()
     {
-        if (stripos(Yii::$app->request->hostInfo, '//m.') !== false) {
+        if (stripos(Yii::$app->request->hostInfo, $this->host) !== false) {
             if (stripos(Yii::$app->request->getAbsoluteUrl(), 'mobile') !== false) {
-                Yii::$app->getResponse()->redirect(Yii::$app->request->hostInfo, 301);
+                Yii::$app->getResponse()->redirect($this->host, 301);
                 Yii::$app->end();
             }
         } elseif ($this->onlyChildDomain) {
-            Yii::$app->getResponse()->redirect(Yii::$app->params['m_website'], 301);
+            Yii::$app->getResponse()->redirect($this->host, 301);
             Yii::$app->end();
         }
     }
+
+
+    /**
+     * {@inheritdoc}
+     */
+//    public function beforeAction($action)
+//    {
+//        if (!parent::beforeAction($action)) {
+//            return false;
+//        }
+//        var_dump(12121);die;
+//        $this->filterDomainUrl();
+//
+//        return true;
+//    }
 }

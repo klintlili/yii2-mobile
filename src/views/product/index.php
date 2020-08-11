@@ -26,7 +26,7 @@ if(!empty($code)) {
                 <?php /** @var $list \snor\web\models\Product */  ?>
                 <?php foreach ($dataProvider->models as $list) { ?>
                     <dd>
-                        <a href="<?=Url::to(['/product/view', 'id' => $list->id])?>" class="block_a">
+                        <a href="<?=Url::to(['/mobile/product/view', 'id' => $list->id])?>" class="block_a">
                             <div class="pl_title"><?=$list->title;?></div>
                             <div class="pl_desc"><?=Yii::$app->formatter->asText($list->desc)?></div>
                             <span class="viewto">查看详情</span>

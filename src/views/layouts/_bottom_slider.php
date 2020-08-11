@@ -33,7 +33,7 @@ $this->registerJsFile("@web/js/TouchSlide.1.1.js",["depends" => ["snor\\web\\ass
             <?php /** @var $model \snor\web\models\News */  ?>
             <?php foreach ($bottom_slider as $model){ ?>
                 <li class="clearfix">
-                    <a href="<?=Url::to(['/news/view', 'id' => $model->id]);?>" class="viewto" data-pjax="0">
+                    <a href="<?=Url::to(['/mobile/news/view', 'id' => $model->id]);?>" class="viewto" data-pjax="0">
                         <div class="news_img_box"><img src="<?=$model->picUrl;?>" alt="<?=$model->title;?>"/></div>
                         <div class="slide_desc">
                             <div class="slide_title ellipse1"><?=$model->title;?></div>

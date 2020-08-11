@@ -5,7 +5,7 @@ namespace klintlili\mobile\controllers;
 use Yii;
 use snor\web\forms\BusinessForm;
 use klintlili\mobile\models\District;
-use yii\web\Controller;
+use klintlili\mobile\Controller;
 use yii\web\ErrorAction;
 use klintlili\mobile\models\HomeIndex;
 

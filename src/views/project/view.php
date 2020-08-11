@@ -9,7 +9,7 @@ $this->title = "{$model->title} – 施诺官网";
 ?>
 <div class="wrap project_view">
     <div class="snor_w clearfix">
-        <div class="snor_path"><a href="<?=Url::to(['/project/index'])?>">服务案例</a>&gt;<a href="<?=Url::to(['/project/index', 'code' => $model->code])?>"><?=$model->cateName;?></a>&gt;<span><?=$model->title;?></span></div>
+        <div class="snor_path"><a href="<?=Url::to(['/mobile/project/index'])?>">服务案例</a>&gt;<a href="<?=Url::to(['/mobile/project/index', 'code' => $model->code])?>"><?=$model->cateName;?></a>&gt;<span><?=$model->title;?></span></div>
         <div class="view_left">
             <div class="project_example clearfix">
                 <div class="example_lf fl"><img src="<?=$model->picUrl;?>" alt="<?=$model->title;?>" /></div>
@@ -19,7 +19,7 @@ $this->title = "{$model->title} – 施诺官网";
                     <div class="example_tittle2">项目描述</div>
                     <?=Yii::$app->formatter->asText($model->desc);?>
                 </div>
-                <a href="<?=Url::to(['/project/view', 'id' => $model->id]);?>" class="block_a"></a>
+                <a href="<?=Url::to(['/mobile/project/view', 'id' => $model->id]);?>" class="block_a"></a>
             </div>
             <div class="project_desc_tittle">项目描述</div>
             <div class="project_view_content">
@@ -29,12 +29,12 @@ $this->title = "{$model->title} – 施诺官网";
                 <?php $preProject = $model->preProject; ?>
                 <?php /* @var $preProject snor\web\models\Project */ ?>
                 <?php if (!empty($preProject)) { ?>
-                    <a href="<?=Url::to(['/project/view', 'id' => $preProject->id])?>" class="ellipse1" title="<?=$preProject->title;?>">上一案例：<?=$preProject->title;?></a>
+                    <a href="<?=Url::to(['/mobile/project/view', 'id' => $preProject->id])?>" class="ellipse1" title="<?=$preProject->title;?>">上一案例：<?=$preProject->title;?></a>
                 <?php } ?>
                 <?php $nextProject = $model->nextProject; ?>
                 <?php /* @var $nextProject snor\web\models\Project */ ?>
                 <?php if (!empty($nextProject)) { ?>
-                    <a href="<?=Url::to(['/project/view', 'id' => $nextProject->id])?>" class="ellipse1" title="<?=$nextProject->title;?>">下一案例：<?=$nextProject->title;?></a>
+                    <a href="<?=Url::to(['/mobile/project/view', 'id' => $nextProject->id])?>" class="ellipse1" title="<?=$nextProject->title;?>">下一案例：<?=$nextProject->title;?></a>
                 <?php } ?>
                 <?php unset($preProject,$nextProject); ?>
             </div>
@@ -46,7 +46,7 @@ $this->title = "{$model->title} – 施诺官网";
                     <ul class="clearfix">
                         <?php /* @var $relatedProject snor\web\models\Project */ ?>
                         <?php foreach ($relatedProjects as $relatedProject){?>
-                            <li><a href="<?=Url::to(['/project/view', 'id' => $relatedProject->id])?>" class="ellipse1"><?=$relatedProject->title;?></a></li>
+                            <li><a href="<?=Url::to(['/mobile/project/view', 'id' => $relatedProject->id])?>" class="ellipse1"><?=$relatedProject->title;?></a></li>
                         <?php } ?>
                     </ul>
                 </div>
@@ -67,9 +67,9 @@ $this->title = "{$model->title} – 施诺官网";
                             <p><?=$topNewProject->title;?></p>
                             <div class="new_project_bot clearfix">
                                 <span><?=date('Y-m-d', $topNewProject->created_at);?></span>
-                                <a href="<?=Url::to(['/project/view', 'id' => $topNewProject->id]);?>">更多 &gt;</a>
+                                <a href="<?=Url::to(['/mobile/project/view', 'id' => $topNewProject->id]);?>">更多 &gt;</a>
                             </div>
-                            <a href="<?=Url::to(['/project/view', 'id' => $topNewProject->id]);?>" class="block_a"></a>
+                            <a href="<?=Url::to(['/mobile/project/view', 'id' => $topNewProject->id]);?>" class="block_a"></a>
                         </dd>
                     <?php } ?>
                 </dl>

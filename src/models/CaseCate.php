@@ -201,8 +201,7 @@ class CaseCate extends ActiveRecord
         /** @var self $cate */
         foreach ($model as $key => $cate){
             $data[$key]['label'] = $cate->name;
-            $data[$key]['url'] = ['project/index', 'code' => $cate->code];
-            $data[$key]['data-url'] = ['/project/index', 'code' => $cate->code];
+            $data[$key]['url'] = ['/mobile/project/index', 'code' => $cate->code];
             $active = Html::isItemActive($data[$key]);
             $data[$key]['active'] = $active;
             if(!$parentActive && $active){

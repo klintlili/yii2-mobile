@@ -27,7 +27,7 @@ if(!empty($code)) {
             <?php if(!empty($case_lists)){ ?>
                 <ul class="pih_list clearfix">
                     <li<?=empty($code)?" class='current'":"";?>>
-                        <a href="<?=Url::to(['/project/index']);?>" class="block_a">
+                        <a href="<?=Url::to(['/mobile/project/index']);?>" class="block_a">
                         <div style="padding-top:8px;">
                             <img src="<?=Url::to('@web/img/anli/qb.png');?>" alt="全部" />
                             <img src="<?=Url::to('@web/img/anli/qb_on.png');?>" alt="全部" class="on" />
@@ -38,7 +38,7 @@ if(!empty($code)) {
                     <?php /** @var $case_list \snor\web\models\CaseCate */  ?>
                     <?php foreach ($case_lists as $case_list){ ?>
                         <li<?=!empty($code)&&$code==$case_list->code?" class='current'":"";?>>
-                            <a href="<?=Url::to(['/project/index', 'code' => $case_list->code]);?>" class="block_a">
+                            <a href="<?=Url::to(['/mobile/project/index', 'code' => $case_list->code]);?>" class="block_a">
                             <div>
                                 <img src="<?=$case_list->grayIconUrl;?>"  alt="<?=$case_list->name;?>"/>
                                 <img src="<?=$case_list->violetIconUrl;?>" alt="<?=$case_list->name;?>" class="on" />
@@ -62,7 +62,7 @@ if(!empty($code)) {
                         <?php /** @var $list \snor\web\models\Project */  ?>
                         <?php foreach ($dataProvider->models as $list) { ?>
                             <li>
-                                <a href="<?=Url::to(['/project/view', 'id' => $list->id]);?>" class="block_a">
+                                <a href="<?=Url::to(['/mobile/project/view', 'id' => $list->id]);?>" class="block_a">
                                 <img src="<?=$list->picUrl;?>" alt="<?=$list->title;?>" />
                                 <div class="border-box">
                                     <p class="ellipse2">
